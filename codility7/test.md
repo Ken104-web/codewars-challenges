@@ -1,23 +1,32 @@
+AsphaltPatches
+
+There is a road consisting of N segments, numbered from 0 to N-1, represented by a string S. Segment S[K] of the road may contain a pothole, denoted by a single uppercase "X" character, or may be a good segment without any potholes, denoted by a single dot, ".".
+
+For example, string ".X..X" means that there are two potholes in total in the road: one is located in segment S[1] and one in segment S[4]. All other segments are good.
+
+The road fixing machine can patch over three consecutive segments at once with asphalt and repair all the potholes located within each of these segments. Good or already repaired segments remain good after patching them.
+
+Your task is to compute the minimum number of patches required to repair all the potholes in the road.
+
 Write a function:
 
 def solution(S)
 
-that, given a string S, returns the index (counting from 0) of a character such that the part of the string to the left of that character is a reversal of the part of the string to its right. The function should return −1 if no such index exists.
+that, given a string S of length N, returns the minimum number of patches required to repair all the potholes.
 
-Note: reversing an empty string (i.e. a string whose length is zero) gives an empty string.
+Examples:
 
-For example, given a string:
+1. Given S = ".X..X", your function should return 2. The road fixing machine could patch, for example, segments 0-2 and 2-4.
 
-"racecar"
+2. Given S = "X.XXXXX.X.", your function should return 3. The road fixing machine could patch, for example, segments 0-2, 3-5 and 6-8.
 
-the function should return 3, because the substring to the left of the character "e" at index 3 is "rac", and the one to the right is "car".
+3. Given S = "XX.XXX..", your function should return 2. The road fixing machine could patch, for example, segments 0-2 and 3-5.
 
-Given a string:
+4. Given S = "XXXX", your function should return 2. The road fixing machine could patch, for example, segments 0-2 and 1-3.
 
-"x"
-
-the function should return 0, because both substrings are empty.
+Corner Test Case: '.X...XX', your function should return 2.
 
 Write an efficient algorithm for the following assumptions:
 
-the length of string S is within the range [0..2,000,000]
+N is an integer within the range [3..100,000];
+string S is made only of the characters '.' and/or 'X'.
