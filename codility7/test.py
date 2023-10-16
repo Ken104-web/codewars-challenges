@@ -1,3 +1,3 @@
 from solution import solution
-S = ".X..X"
+S = "X.XXXXX.X."
 print(solution(S))
