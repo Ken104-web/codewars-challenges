@@ -15,7 +15,7 @@ def solution(A, F, M):
     # if eg: value of F ==  17 and F = 2
     # 17/2 not possible since highest number in dice is 6  
     if left <= 0 or left < F:
-        return []
+        return [0]
     
     result = []
     while left:
