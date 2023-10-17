@@ -1,6 +1,7 @@
 You have just rolled a dice several times. The N roll results that you remember are described by an array A. However, there are F rolls whose results you have forgotten. The arithmetic mean of all of the roll results (the sum of all the roll results divided by the number of rolls) equals M.
 
-What are the possible results of the missing rolls?
+What are the possible results of the missing rolls? 
+<!-- some were missing -->
 
 Write a function:
 
