@@ -21,7 +21,9 @@ def solution(A, F, M):
     while left:
         dice = min(left - F + 1, 6)
         result.append(dice)
+        # update left
         left -= dice
+        # dice values remaining
         F -= 1
 
     return result
