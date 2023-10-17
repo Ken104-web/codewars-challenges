@@ -17,5 +17,14 @@ def solution(A, F, M):
     if left <= 0 or left < F:
         return []
     
+    result = []
+    while left:
+        dice = min(left - F + 1, 6)
+        result.append(dice)
+        left -= dice
+        F -= 1
+
+    return result
+    
     
     
