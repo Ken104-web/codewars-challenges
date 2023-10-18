@@ -5,6 +5,13 @@ def solution(S):
     for i in range(N):
         frequency[ord(S[i]) - ord("a")]+= 1
 
+    count = 0
+    for i in range(len(frequency)):
+        if frequency[i] % 2 == 1:
+            count += 1
+    
+    return count
+
         
 
         
