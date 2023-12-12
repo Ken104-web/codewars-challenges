@@ -1,4 +1,5 @@
 # find the  two largest numbers of the  input array 
+# ps you can also use infinity  method to rep an undefined number 
 class Solution:
     def maxProduct(self, nums: [int]) -> int:
         r = 0
